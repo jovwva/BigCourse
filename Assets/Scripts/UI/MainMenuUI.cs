@@ -18,6 +18,8 @@ public class MainMenuUI : MonoBehaviour
             // Работает только в рабочем билде!!!
             Application.Quit();
         } );
+
+        Time.timeScale = 1f;
     }
 
 
