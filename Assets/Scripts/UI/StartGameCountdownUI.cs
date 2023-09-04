@@ -8,6 +8,14 @@ public class StartGameCountdownUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI countdownText;
 
+    private Animator animator;
+    private int precountdownNumber;
+    private const string ANIMATOR_TRIGGER = "NumberPopup";
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     private void Start()
     {
         KitchenGameManager.Instance.OnStateChanged += KitchenGameManager_OnStateChanged;
@@ -29,7 +37,15 @@ public class StartGameCountdownUI : MonoBehaviour
 
     private void Update()
     {
-        countdownText.text = Mathf.Ceil(KitchenGameManager.Instance.GetCountdownToStartTimer()).ToString();
+        int countdownNumber = Mathf.CeilToInt(KitchenGameManager.Instance.GetCountdownToStartTimer());
+        countdownText.text = countdownNumber.ToString();
+
+        if (precountdownNumber != countdownNumber)
+        {
+            precountdownNumber = countdownNumber;
+            animator.SetTrigger(ANIMATOR_TRIGGER);
+            SoundManager.Instance.PlayCountdownSound();
+        }
     }
     private void Show()
     {

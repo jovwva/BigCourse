@@ -114,7 +114,7 @@ public class OptionsUI : MonoBehaviour
         moveUpText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Up);
         moveDownText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Down);
         moveLeftText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Left);
-        moveLeftText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Right);
+        moveRightText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Right);
 
         actionText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Action);
         actionAltText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Action_Alt);
