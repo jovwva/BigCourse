@@ -12,6 +12,10 @@ public class GameInput : MonoBehaviour
 
     public event EventHandler OnInteractAction;
     public event EventHandler OnInteractAlternateAction;
+
+    public event EventHandler OnInteractAction_2;
+    public event EventHandler OnInteractAlternateAction_2;
+
     public event EventHandler OnPauseAction;
     public event EventHandler OnBindingRibind;
 
@@ -44,12 +48,15 @@ public class GameInput : MonoBehaviour
         }
 
         playerInputActions.Player.Enable();
+        playerInputActions.Player_2.Enable();
 
         playerInputActions.Player.Interact.performed            += Interact_performed; 
         playerInputActions.Player.InteractAlternate.performed   += InteractAlternate_performed;
         playerInputActions.Player.Pause.performed               += Pause_performed;
 
-        
+        playerInputActions.Player_2.Interact.performed            += Interact_performed_2; 
+        playerInputActions.Player_2.InteractAlternate.performed   += InteractAlternate_performed_2;
+        playerInputActions.Player_2.Pause.performed               += Pause_performed;
         
     }
     private void OnDestroy()
@@ -57,6 +64,10 @@ public class GameInput : MonoBehaviour
         playerInputActions.Player.Interact.performed            -= Interact_performed; 
         playerInputActions.Player.InteractAlternate.performed   -= InteractAlternate_performed;
         playerInputActions.Player.Pause.performed               -= Pause_performed;
+
+        playerInputActions.Player_2.Interact.performed            -= Interact_performed_2; 
+        playerInputActions.Player_2.InteractAlternate.performed   -= InteractAlternate_performed_2;
+        playerInputActions.Player_2.Pause.performed               -= Pause_performed;
 
         playerInputActions.Dispose();
     }
@@ -74,9 +85,20 @@ public class GameInput : MonoBehaviour
     {
         OnInteractAlternateAction?.Invoke(this, EventArgs.Empty);
     }
-    public Vector2 GetMovementVectorNormalized()
+
+    private void Interact_performed_2(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
+        OnInteractAction_2?.Invoke(this, EventArgs.Empty);
+    }
+    private void InteractAlternate_performed_2(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnInteractAlternateAction_2?.Invoke(this, EventArgs.Empty);
+    }
+    public Vector2 GetMovementVectorNormalized(int playerID)
+    {
+        Vector2 inputVector = playerID == 0 ? 
+            playerInputActions.Player.Move.ReadValue<Vector2>() :
+            playerInputActions.Player_2.Move.ReadValue<Vector2>();
 
         inputVector = inputVector.normalized;
         return inputVector;

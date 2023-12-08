@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3632,8 +3632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7296db422e8d8468e9b4e3d1410a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerID: 1
   moveSpeed: 7.5
-  gameInput: {fileID: 1020819491}
   counterLayedMask:
     serializedVersion: 2
     m_Bits: 64
@@ -5282,7 +5282,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5ab04d90f9e9cd646a3bd2193331a761, type: 2}
+      objectReference: {fileID: 2100000, guid: ead4e305e7c244b418af43ccfd3c5aac, type: 2}
     - target: {fileID: 3294758251327466532, guid: 1c5dda3c7cd3cf742afcade5419faeab,
         type: 3}
       propertyPath: m_RootOrder
@@ -5347,7 +5347,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5ab04d90f9e9cd646a3bd2193331a761, type: 2}
+      objectReference: {fileID: 2100000, guid: ead4e305e7c244b418af43ccfd3c5aac, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5684,10 +5684,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1646405597}
     m_Modifications:
+    - target: {fileID: 195600532346517148, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4590069292866599025, guid: 3128c30f71c533d419d3065828ce7238,
         type: 3}
       propertyPath: m_Name
       value: StoveCounter (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804291968469676221, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7054258807175008459, guid: 3128c30f71c533d419d3065828ce7238,
         type: 3}
@@ -5742,6 +5752,11 @@ PrefabInstance:
     - target: {fileID: 7054258807175008459, guid: 3128c30f71c533d419d3065828ce7238,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878708151035626850, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7020,10 +7035,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1646405597}
     m_Modifications:
+    - target: {fileID: 132968615162375897, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 195600532346517148, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4590069292866599025, guid: 3128c30f71c533d419d3065828ce7238,
         type: 3}
       propertyPath: m_Name
       value: StoveCounter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804291968469676221, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7054258807175008459, guid: 3128c30f71c533d419d3065828ce7238,
         type: 3}
@@ -7080,6 +7110,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8878708151035626850, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7122,8 +7157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7296db422e8d8468e9b4e3d1410a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerID: 0
   moveSpeed: 7.5
-  gameInput: {fileID: 1020819491}
   counterLayedMask:
     serializedVersion: 2
     m_Bits: 64
@@ -9156,7 +9191,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ead4e305e7c244b418af43ccfd3c5aac, type: 2}
+      objectReference: {fileID: 2100000, guid: dba792b574c201a4eabfe983aa82805a, type: 2}
     - target: {fileID: 3294758251327466532, guid: 1c5dda3c7cd3cf742afcade5419faeab,
         type: 3}
       propertyPath: m_RootOrder
@@ -9221,7 +9256,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ead4e305e7c244b418af43ccfd3c5aac, type: 2}
+      objectReference: {fileID: 2100000, guid: dba792b574c201a4eabfe983aa82805a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14382,10 +14417,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1646405597}
     m_Modifications:
+    - target: {fileID: 195600532346517148, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4590069292866599025, guid: 3128c30f71c533d419d3065828ce7238,
         type: 3}
       propertyPath: m_Name
       value: StoveCounter (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804291968469676221, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7054258807175008459, guid: 3128c30f71c533d419d3065828ce7238,
         type: 3}
@@ -14440,6 +14485,11 @@ PrefabInstance:
     - target: {fileID: 7054258807175008459, guid: 3128c30f71c533d419d3065828ce7238,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878708151035626850, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17797,10 +17847,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1646405597}
     m_Modifications:
+    - target: {fileID: 195600532346517148, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4590069292866599025, guid: 3128c30f71c533d419d3065828ce7238,
         type: 3}
       propertyPath: m_Name
       value: StoveCounter (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804291968469676221, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7054258807175008459, guid: 3128c30f71c533d419d3065828ce7238,
         type: 3}
@@ -17855,6 +17915,11 @@ PrefabInstance:
     - target: {fileID: 7054258807175008459, guid: 3128c30f71c533d419d3065828ce7238,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878708151035626850, guid: 3128c30f71c533d419d3065828ce7238,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
